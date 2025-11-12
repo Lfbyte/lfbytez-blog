@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pathSegments = path.split('/').filter(segment => segment)
   pathSegments.pop()
   
-  let final = '<a href="/">home</a> '
+  let final = '<a href="/lfbytez">home</a> '
 
     pathSegments.forEach(e=>{
       
