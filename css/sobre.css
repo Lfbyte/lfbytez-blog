@@ -1,0 +1,521 @@
+*{
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    color:white;
+}
+
+#fiveserver-info-wrapper {
+
+    display: none !important;
+}
+
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Bold.woff2) format('woff2');
+    font-display: swap;
+} 
+
+
+@font-face {
+    font-family: whitney;
+    src: url(../fonts/whitneybook.woff2) format('woff2');
+    font-display: swap;
+} 
+
+
+@keyframes profileup{
+
+    0%{
+
+
+    
+        box-shadow: 2px 2px 10px aqua;
+        position: relative;
+        top:0px;
+    }
+
+    50%{
+        box-shadow: 2px 2px 30px aqua;
+        position: relative;
+        top:10px;
+        
+        
+    }
+
+    100%{
+        box-shadow: 2px 2px 10px orange;
+        position: relative;
+        top:0px;
+        
+    
+    }
+}
+
+html, body{
+    height: 100%;
+}
+
+
+body{
+
+    background-color: rgb(21, 22, 24);
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+header{
+
+    display: flex;
+    padding: 15px 0;
+}
+
+nav{
+    width: 100%;
+     background-color:#1d2338;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+    top:0px;
+    box-shadow: 0px 4px 5px  #000;
+    position: fixed;
+    z-index: 9999;
+}
+
+
+nav h1{
+    font-size: 1.7rem;
+    font-family: poppins;
+    text-transform: capitalize;
+
+    text-shadow: 2px 2px 2px black
+    
+}
+
+
+nav h1 a{
+    text-decoration:none;
+    font-family: poppins;
+    color:white;
+}
+
+ul{
+
+    display: flex;
+
+}
+
+ul li{
+
+    list-style: none;
+    
+}
+
+ul li a{
+
+    text-decoration: none;
+}
+
+.options-container{
+    
+    display: flex;
+    align-items: center;
+
+}
+
+
+div.light-dark-mode{
+    
+    width:2.8rem;
+    height: 2.8rem;
+    border-radius: 30%;
+    background-color: #FBD38D; 
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    padding:5px;
+    overflow: hidden;
+
+}
+
+
+div.light-dark-mode:hover{
+    cursor: pointer;
+}
+
+.btn-darkmode{
+    
+    fill: black;
+    
+}
+
+.hamburguer{
+
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 30%;
+    background-color: #FBD38D;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.hamburguer:hover{
+
+    cursor: pointer;
+}
+
+.x{
+
+    width: 60%;
+    
+    padding: 0.1rem;
+    background-color: black;
+    transition: transform 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-options{
+
+    display: none; 
+    position: fixed;
+    inset: 0;
+    background-color:#161925;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+
+}
+
+
+.nav-options  li  {
+
+    font-family: poppins, sans-serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px black;
+}
+
+.nav-options li a {
+
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+footer {
+    
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.8;
+    text-align: center;
+    opacity: 0;
+    height: 10%;
+    padding: 15px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color:#1d2338;
+
+}
+
+.reveal-sobre{
+
+
+    opacity: 1 !important;
+}
+
+
+
+.container{
+    transition: 0.5s ease;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.profile{
+
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-image:url(../assets/perfil.jpg);
+    background-repeat: no-repeat;
+    border:3px solid #F1D302;
+    background-size: cover;
+    background-position: center;
+    transition:1s;
+    animation-name:profileup;
+    animation-timing-function:steps(20);
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+}
+
+
+.descricao{
+    
+    line-height: 1.5;
+    color:white;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    font-weight: 900;
+    word-break: break-all;
+    text-align: center;
+    
+}
+
+
+.rotate-effect{
+
+     transition: 1s;
+        transform: rotateY(180deg);
+}
+
+.rotate-effect-normal{
+
+    transition: 1s;
+    transform: rotateY(360deg) !important;
+}
+
+.profile:hover{
+        transition: 1s;
+        transform: rotateY(180deg);
+}
+
+
+
+
+.container-author{    
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly; 
+}
+
+
+.container-author > * {
+
+    margin: 15px 0;
+}
+
+
+
+.socials{
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+.socials a{
+    
+    text-decoration: none;
+    margin:0 15px;
+}
+
+
+.socials h2{
+
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin:0 0 15px 0;
+}
+
+
+.github{
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius:10px;
+    
+        transition: .2s ease;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        border-bottom:7px solid rgb(241, 237, 237);
+        background-color: #070606;
+       
+    
+}
+
+
+.github:hover{
+transition: .2s ease;
+    -o-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -webkit-transition: .2s ease;
+    position: relative;
+    top:2px;
+    border-bottom:6px solid #d7d0d0;
+    background-color: #070606;
+    box-shadow: 1px 1px 15px #f7f4f4;
+ 
+}
+
+
+.linkedin{
+        height: 3.5rem;
+        width: 3.5rem;
+        transition: .2s ease;
+        -o-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -webkit-transition: .2s ease;
+        border-radius:10px;
+        border-bottom:8px solid #0f78a9;
+        background-color:rgb(255, 254, 254);
+        box-shadow: 0px 0px 0 #0897de;
+        fill:#0578ae;
+}
+
+
+
+.linkedin:hover{
+     transition: .3s ease;
+    -o-transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    position: relative;
+    top:2px;
+    border-bottom:6px solid #0f78a9;
+    background-color:rgb(255, 254, 254);
+    box-shadow: 1px 1px 15px #0897de;
+    fill:#0578ae;
+ 
+}
+
+
+.email{
+
+        height: 3.5rem;
+        width: 3.5rem;
+        transition: .4s ease;
+        -o-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -webkit-transition: .4s ease;
+        border-radius:10px;
+        border-bottom:8px solid #0f78a9;
+            border-bottom: 8px solid  #DE5145 ;
+         background-color: wheat;
+        box-shadow: 0px 0px 0 #0897de;
+       fill: #DE5145;
+
+}
+
+.email:hover{
+
+    transition: .4s ease;
+    -o-transition: .4s ease;
+    -webkit-transition:.4s ease;
+    -moz-transition: .4s ease;
+    position: relative;
+    top:2px;
+    border-bottom: 6px solid  #de3021;
+    background-color: rgb(255,254,254);
+    box-shadow: 1px 1px 15px #DE5145;
+    fill: #DE5145  
+}
+
+
+
+
+
+
+/********************* MOBILE **************/
+
+
+
+@media screen and (max-width: 800px) {
+
+    .email:hover{
+
+          top:0px;
+          border-bottom: 8px solid  #DE5145 ;
+          box-shadow: none;
+}
+
+   .linkedin:hover{
+
+    top:0px;
+    border-bottom: 8px solid #0f78a9;
+    box-shadow: none;
+   }
+
+   .github:hover{
+
+    top:0px;
+    box-shadow: none;
+    border-bottom: 7px solid white;
+}
+
+ .profile{
+
+    animation-name: none;
+
+    width: 150px;
+    height: 150px;
+ }
+
+.email{
+
+    width: 3.2rem;
+    height: 3.2rem;
+     background-color: white;
+}
+
+.linkedin{
+
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.github{
+
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.descricao{
+
+    font-size: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/*******************************************/
